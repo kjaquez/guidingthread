@@ -1006,8 +1006,9 @@
     // Form submit
     document.getElementById('signup-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      this.style.display = 'none';
-      document.getElementById('success-msg').style.display = 'block';
+      const email = document.getElementById('email').value.trim();
+      const magicLink = 'https://magic.beehiiv.com/v1/69c87cda-90ce-4340-b29b-b7da0252764c?email=' + encodeURIComponent(email);
+      window.location.href = magicLink;
     });
   </script>
 
